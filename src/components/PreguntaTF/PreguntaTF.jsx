@@ -6,18 +6,34 @@ import styles from './PreguntaTF_styles'
 
 
 // components
-import ButtonTF from '../ButtonTF'
+import Modal from '../Generales/Modal/Modal'
+import PreguntaResultado from '../PreguntaResultado'
 
 // Componente base
-const PreguntaTF_base = ({...props}) => {
+const PreguntaTF_base = ({passed , nxtUrl, repeatUrl, visibility,answers, finished, ...props}) => {
+    
+    
     return (
         <div {...props}>
-            <div className='contador'> Question 1/10</div>
-            <div className='pregunta'> { props.children } </div>
-            <ButtonTF t />
-            <ButtonTF f />
-            <ButtonTF />
+            <Modal visible={visibility} w={35} err={!passed} ok={passed} repeatUrl={repeatUrl} nxtUrl={nxtUrl} finished={finished} >
+            	
+                {
+                    answers.map((question, index) => {
+                            if(question.right === 1){
+                                
+                                return (
+                                    
+                                    <PreguntaResultado key={'ok'+index} ok>{index+1}</PreguntaResultado>
+                                )
+                            } else {
+                                return (
+                                    <PreguntaResultado key={'err'+index} err>{index+1}</PreguntaResultado>
+                                )
+                            }
+                    })
+                }
 
+            </Modal>
         </div>
     )
 }

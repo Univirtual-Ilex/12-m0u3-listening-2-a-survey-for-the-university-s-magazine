@@ -1,95 +1,173 @@
 const data = [
   {
     id: 1,
-    pregunta: "Does she have a smartphone?",
-    respuestas: [
-      "No she doesn’t.",
-      "Yes, she does.",
-      "She has a cellphone but not smartphone"
-    ],
-    correcta: 2
+    text: "Does she have a smartphone?",
+    button1: {
+      "text": "No she doesn’t.",
+      "score": 0
+    },
+    button2: {
+      text: "Yes, she does.",
+      score: 1
+    },
+    button3: {
+      text: "She has a cellphone but not smartphone",
+      score: 0
+    },
+    right: 2
   },
   {
     id: 2,
-    pregunta: "What is her name?",
-    respuestas: ["Maryury", "Mayerly", "Martha"],
-    correcta: 1
+    text: "What is her name?",
+    button1: {
+      "text": "Maryury",
+      "score": 1
+    },
+    button2: {
+      text: "Mayerly",
+      score: 0
+    },
+    button3: {
+      text: "Martha",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 3,
-    pregunta: "Where does she come from?",
-    respuestas: [
-      "She comes from Samaria Caldas",
-      "Anserma Caldas",
-      "Villa Maria Caldas"
-    ],
-    correcta: 3
+    text: "Where does she come from?",
+    button1: {
+      "text": "She comes from Samaria Caldas",
+      "score": 0
+    },
+    button2: {
+      text: "Anserma Caldas",
+      score: 0
+    },
+    button3: {
+      text: "Villa Maria Caldas",
+      score: 1
+    },
+    right: 0
   },
   {
     id: 4,
-    pregunta: "What is her address?",
-    respuestas: [
-      "28th street between 5th and 6th avenues in Los Almendros Residential complex",
-      "28th street between 4th and 5th avenue Los Almendros Residential complex near the hospital",
-      "28th street between 4th and 5th avenue Los Almendros Residential complex, Dosquebradas"
-    ],
-    correcta: 2
+    text: "What is her address?",
+    button1: {
+      "text": "28th street between 5th and 6th avenues in Los Almendros Residential complex",
+      "score": 0
+    },
+    button2: {
+      text: "28th street between 4th and 5th avenue Los Almendros Residential complex near the hospital",
+      score: 1
+    },
+    button3: {
+      text: "28th street between 4th and 5th avenue Los Almendros Residential complex, Dosquebradas",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 5,
-    pregunta: "What is her telephone number?",
-    respuestas: ["3202634587", "3102634587", "3112634587"],
-    correcta: 1
+    text: "What is her telephone number?",
+    button1: {
+      "text": "3202634587",
+      "score": 1
+    },
+    button2: {
+      text: "3102634587",
+      score: 0
+    },
+    button3: {
+      text: "3112634587",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 6,
-    pregunta: "What does she do in her free time?",
-    respuestas: [
-      "She doesn’t have free time",
-      "She goes to the movies",
-      "She watches TV"
-    ],
-    correcta: 2
+    text: "What does she do in her free time?",
+    button1: {
+      "text": "She doesn’t have free time",
+      "score": 0
+    },
+    button2: {
+      text: "She goes to the movies",
+      score: 1
+    },
+    button3: {
+      text: "She watches TV",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 7,
-    pregunta: "Where does she live now?",
-    respuestas: [
-      "She lives in Villa Maria Caldas",
-      "She Lives in Dosquebradas",
-      "She lives in Pereira"
-    ],
-    correcta: 3
+    text: "Where does she live now?",
+    button1: {
+      "text": "She lives in Villa Maria Caldas",
+      "score": 0
+    },
+    button2: {
+      text: "She Lives in Dosquebradas",
+      score: 0
+    },
+    button3: {
+      text: "She lives in Pereira",
+      score: 1
+    },
+    right: 0
   },
   {
     id: 8,
-    pregunta: "What does she use the smartphone for?",
-    respuestas: [
-      "To search information, take pictures, chat with friends, check Facebook or listen to music.",
-      "To search information, take pictures, watch videos and listen to music.",
-      "To search information, take pictures, to check Twitter and Instagram, and listen to music"
-    ],
-    correcta: 1
+    text: "What does she use the smartphone for?",
+    button1: {
+      "text": "To search information, take pictures, chat with friends, check Facebook or listen to music.",
+      "score": 1
+    },
+    button2: {
+      text: "To search information, take pictures, watch videos and listen to music.",
+      score: 0
+    },
+    button3: {
+      text: "To search information, take pictures, to check Twitter and Instagram, and listen to music",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 9,
-    pregunta: "What does she do?",
-    respuestas: [
-      "She is a secretary",
-      "She is a receptionist",
-      "She is a hotel manager"
-    ],
-    correcta: 2
+    text: "What does she do?",
+    button1: {
+      "text": "She is a secretary",
+      "score": 0
+    },
+    button2: {
+      text: "She is a receptionist",
+      score: 1
+    },
+    button3: {
+      text: "She is a hotel manager",
+      score: 0
+    },
+    right: 0
   },
   {
     id: 10,
-    pregunta: "Where does she work?",
-    respuestas: [
-      "She works at a bar",
-      "She works at a restaurant",
-      "She works at a hotel"
-    ],
-    correcta: 3
+    text: "Where does she work?",
+    button1: {
+      "text": "She works at a bar",
+      "score": 0
+    },
+    button2: {
+      text: "She works at a restaurant",
+      score: 0
+    },
+    button3: {
+      text: "She works at a hotel",
+      score: 1
+    },
+    right: 0
   }
 ];
 
