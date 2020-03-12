@@ -12,6 +12,7 @@ import styled from "styled-components";
 import styles, { UiButtonsContainer } from "./Actividad_styles";
 import Ilex from "../../App/variables";
 import ButtonRadioSimple from '../ButtonRadioSimple'
+import ButtonAudio from '../ButtonAudio'
 // Data
 import Data from "./Actividad_data";
 import PreguntaTF from "../PreguntaTF"
@@ -58,12 +59,12 @@ const Actividad_base = ({staticContext, ...props }) => {
 
   const questions = Data.map((data,i) => {
         return(
-            <ICol w={25} key={i} >
+            <IRow key={i} >
                 <p > <strong >{i + 1}).</strong> {data.text}</p>
                 <ButtonRadioSimple setCheckedState={setChecked} arrId={i} buttonId={0} nameb={'first_button1' + i} text={data.button1.text} className={"ml-1  " + 'first_button1' + i} />
                 <ButtonRadioSimple setCheckedState={setChecked} arrId={i} buttonId={1} nameb={'first_button1' + i} text={data.button2.text} className={"ml-1  " + 'first_button1' + i} /> 
                 <ButtonRadioSimple setCheckedState={setChecked} arrId={i} buttonId={2} nameb={'first_button1' + i} text={data.button3.text} className={"ml-1  " + 'first_button1' + i} /> 
-            </ICol>
+            </IRow>
         )
     })
   return (
@@ -71,7 +72,7 @@ const Actividad_base = ({staticContext, ...props }) => {
       <UiButtonsContainer>
         <ButtonUi
           icon="ilx-ayuda"
-          tooltip="After reading, answer which of the following answers to the questions is correct"
+          tooltip="After listening, answer which of the following answers to the questions is correct"
         />
         <ButtonUi icon="ilx-volver" tooltip="Start Again" />
       </UiButtonsContainer>
@@ -83,15 +84,17 @@ const Actividad_base = ({staticContext, ...props }) => {
           </MainTitle>
         </ICol>
       </IRow>
-      <IRow justify="center" gutters={1}>
-        <IRow w={85} align="center" py="0.5">
+      <IRow>
+        <ButtonAudio src="./media/audio.mp3"></ButtonAudio>
+      </IRow>
+      <IRow justify="center" gutters={1} >
+        <IRow w={90} align="center" py="2" className="items">
           {questions}
         </IRow>
 
-        <IRow>
-          <ICol >
+        <IRow className="check" >
             <ButtonCheck onClick={checkActivity} />
-          </ICol>
+         
         </IRow>
       </IRow>
       <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad1'} finished={passed} />

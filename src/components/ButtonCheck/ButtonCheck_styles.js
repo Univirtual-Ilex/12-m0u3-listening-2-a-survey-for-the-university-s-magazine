@@ -14,7 +14,7 @@ button{
     padding:0.8em 3em ;
     border-radius: 0 0 2em 2em;
     position: absolute;
-    top:-1.3em;
+    margin-top:1em;
     right:0;
     cursor:pointer;
     box-shadow: 0 0.5em 0.5em 0 rgba(0,0,0,0.1);

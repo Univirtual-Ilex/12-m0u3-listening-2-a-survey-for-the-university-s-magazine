@@ -4,6 +4,8 @@ import {margin, padding } from '../Grid/Grid_styles'
 // import Ilex from '../../App/variables'
 const styles = css`
 button{
+    margin-left: 50em;
+    margin-top: 0.6em;
     background: linear-gradient(90deg, #1B1E5A, #863FFD);
     box-shadow: 0 0.5em 0 0 ${Ilex.verde};
     color: #fff;

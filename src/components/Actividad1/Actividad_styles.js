@@ -33,7 +33,15 @@ const mistyles = css`
       width: 10em;
     }
   }
-`;
+  p{
+    margin-top:1em;
+    margin-right: 4em;
+  }
+  .check{
+    margin-top: 0.5em;
+    margin-left: 69.8em;
+  }
+`
 
 export const DraggablesContainer = styled.div`
   width: 90%;

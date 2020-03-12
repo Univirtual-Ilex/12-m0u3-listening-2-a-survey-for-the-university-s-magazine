@@ -28,7 +28,8 @@ const ButtonRadioSimple_base = ({buttonId,setCheckedState, text, arrId, nameb,..
 	            	name={nameb}
 	            >
             	</Checkbox>
-            	<span className="checkmark">{text} </span>
+            	<span className="checkmark"></span>
+				<div className="text">{text}</div>
             </label>
         </div>
     )
