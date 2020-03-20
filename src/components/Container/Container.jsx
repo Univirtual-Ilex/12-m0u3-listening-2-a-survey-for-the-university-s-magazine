@@ -20,10 +20,11 @@ const Container_base = ({ h, w, bgImage, row,...props}) => { // se traen los pro
 
 const Container = styled(Container_base)`
 
-    display: flex;
+display: flex;
     justify-content: center;
     align-items:center;
     height:100%;
+    overflow-y:auto;
 
     .viewport{
         box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.15);
@@ -49,6 +50,12 @@ const Container = styled(Container_base)`
         background-size: cover;
     }
 
+    @media screen and (max-height: 1080px) {
+        align-items:start;
+        position:relative;
+        padding-top: 6em;
+        padding-bottom: 6em;
+    }
 `
 
 export default Container
