@@ -74,7 +74,7 @@ const Actividad_base = ({staticContext, ...props }) => {
           icon="ilx-ayuda"
           tooltip="After listening, answer which of the following answers to the questions is correct"
         />
-        <ButtonUi icon="ilx-volver" tooltip="Start Again" />
+        <ButtonUi icon="ilx-volver" tooltip="Start Again" onClick = { () => window.location.reload()}  />
       </UiButtonsContainer>
       <IRow pt={2}>
         <ICol pt={2} pb={0.5}>
@@ -97,7 +97,7 @@ const Actividad_base = ({staticContext, ...props }) => {
          
         </IRow>
       </IRow>
-      <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'/actividad1'} finished={passed} />
+      <PreguntaTF visibility={modalFlag}  answers={Data} passed={passed} repeatUrl={'#/actividad1'} finished={passed} />
     </Container>
   );
 };
