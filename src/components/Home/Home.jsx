@@ -16,7 +16,7 @@ const Home_base = function({ ...props }) {
             Listen to a man asking some questions to a woman. Select the proper
             answers you listen to. {}
             <span className="negrilla">
-              <br/><br/>¡Time to practice your listening skill!
+              <br/><br/>Time to practice your listening skill!
             </span>
           </p>
           <ButtonLink to="/actividad1">Start</ButtonLink>
